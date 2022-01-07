@@ -17,7 +17,7 @@ import { ExpenseService } from './expense.service';
   
     @Post()
     async saveExpense(
-       
+       @Body('signedInUserID')signedInUserID :any ,
       @Body('cash') cash: any,
       @Body('category') category: any,
       @Body('account') account: any,
@@ -25,7 +25,7 @@ import { ExpenseService } from './expense.service';
       @Body('date') date:any
     ) : Promise<any>{
       try {
-        const res = await this.expenseService.saveExpense(cash, category ,account,transaction , date);
+        const res = await this.expenseService.saveExpense(signedInUserID,cash, category ,account,transaction , date);
         return { result: res };
       } catch (error) {
         return error;

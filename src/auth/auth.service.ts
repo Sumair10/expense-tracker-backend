@@ -51,33 +51,7 @@ import {
       }
     }
   
-    // async signup(req) {
-    //   console.log(req, 'requesttttt');
-    //   try {
-    //     console.log('signup 2');
-    //     const uniqueMail = await this.authModel.findOne({ email: req.email });
-    //     console.log(uniqueMail);
-    //     if (!uniqueMail) {
-    //       console.log('inside if');
-    //       req.hash = bcrypt.hashSync(req.password, 8);
-    //       console.log(req, 'reqqq4');
-    //       delete req.password;
-  
-    //       console.log(req, 'req222');
-    //       const newUser = new this.authModel(req);
-    //       console.log(newUser);
-    //       const user = await this.authModel.create(newUser);
-    //       // const signupDetails = user
-    //       return { ...user, statusCode: 200 };
-    //     } else {
-    //       // console.log("inside else")
-    //       return 'User Already Exist';
-    //     }
-    //   } catch (error) {
-    //     console.log(error);
-    //     throw [404, error.message];
-    //   }
-    // }
+    
   
     async saveUser(
         userName: any,

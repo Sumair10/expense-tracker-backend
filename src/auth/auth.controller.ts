@@ -28,10 +28,8 @@ import {
       }
     }
   
-
   
-  
-    @Post()
+    @Post('/signup')
     async saveUser(
       @Body('userName') userName: any,
       @Body('email') email: any,

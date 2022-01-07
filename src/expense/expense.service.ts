@@ -17,7 +17,7 @@ import {
     ) {}
 
     async saveExpense(
-      
+      signedInUserID:any,
         cash: any,
         category : any,
         account: any,
@@ -26,6 +26,7 @@ import {
     ): Promise<any> {
       try {
           const newExpense = new this.expenseModel({
+            signedInUserID,
             cash,
             category,
             account,

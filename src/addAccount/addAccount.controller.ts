@@ -18,12 +18,12 @@ import {
   
     @Post()
     async addAccount(
-       
+       @Body('signedInUserID') signedInUserID :any ,
       @Body('accountName') accountName: any,
       @Body('cash') cash: any
     ) : Promise<any>{
       try {
-        const res = await this.addAccountService.addAccount(accountName, cash);
+        const res = await this.addAccountService.addAccount(signedInUserID ,accountName, cash);
         return { result: res };
       } catch (error) {
         return error;

@@ -18,13 +18,13 @@ import {
     ) {}
 
     async addAccount(
-      
+      signedInUserID: any,
         accountName: any,
       cash: any,
     ): Promise<any> {
       try {
           const newAccount = new this.addAccountModel({
-       
+            signedInUserID ,
             accountName,
             cash,
           });
